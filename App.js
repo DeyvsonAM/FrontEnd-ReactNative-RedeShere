@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image } from 'react-native';
 
+import LoginPage from './login';
+import RegisterPage from './cadastro';
 import Homepage from './Homepage';
 import Historico from './Historico';
 import Motorista from './Motorista';
@@ -46,7 +48,9 @@ function TabNavigator() {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="HomePage">
+      <Stack.Navigator initialRouteName="LoginPage">
+        <Stack.Screen name="LoginPage" component={LoginPage} options={{ title: 'Login' }} />
+        <Stack.Screen name="RegisterPage" component={RegisterPage} options={{ title: 'Cadastro' }} />
         <Stack.Screen name="HomePage" component={TabNavigator} options={{ headerShown: false }} />
         <Stack.Screen name="ConfirmationPage" component={ConfirmationPage} options={{ title: 'Confirmação' }} />
         <Stack.Screen name="MapPage" component={MapPage} options={{ title: 'Mapa' }} />
