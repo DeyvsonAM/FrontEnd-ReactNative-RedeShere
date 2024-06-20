@@ -7,7 +7,7 @@ export default function ConfirmationPage() {
   const route = useRoute();
   const { currentLocation, destinationLocation } = route.params;
 
-  const handleMapPress = () => {
+  const Mapa= () => {
     navigation.navigate('MapPage', {
       currentLocation,
       destinationLocation,
@@ -24,7 +24,7 @@ export default function ConfirmationPage() {
         Caso queira, pode entrar em contato com o motorista pelas seguintes formas:
       </Text>
 
-      <TouchableOpacity style={styles.containerEmail} onPress={handleMapPress}>
+      <TouchableOpacity style={styles.containerEmail} onPress={Mapa}>
         <Image style={styles.imgRef} source={require('./assets/mapa.png')} />
         <Text style={styles.fontBotao}>Mapa</Text>
         <Image style={styles.imgRef} source={require('./assets/proxima.png')} />

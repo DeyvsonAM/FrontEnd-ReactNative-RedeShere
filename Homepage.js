@@ -17,7 +17,7 @@ export default function HomePage() {
     (async () => {
       let { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== 'granted') {
-        setAddress('Permission to access location was denied');
+        setAddress('Você Precisa Autorizar o Acesso !');
         return;
       }
 
@@ -66,7 +66,7 @@ export default function HomePage() {
     }
   };
 
-  const handleNavigateToConfirmation = async () => {
+  const TranportedeValor = async () => {
     if (!location) {
       Alert.alert('Erro', 'Localização atual não disponível.');
       return;

@@ -12,8 +12,8 @@ export default function MapPage({ route }) {
         initialRegion={{
           latitude: (currentLocation.latitude + destinationLocation.latitude) / 2,
           longitude: (currentLocation.longitude + destinationLocation.longitude) / 2,
-          latitudeDelta: Math.abs(currentLocation.latitude - destinationLocation.latitude) * 2,
-          longitudeDelta: Math.abs(currentLocation.longitude - destinationLocation.longitude) * 2,
+          latitudeDelta: Math.abs(currentLocation.latitude - destinationLocation.latitude), 
+          longitudeDelta: Math.abs(currentLocation.longitude - destinationLocation.longitude),
         }}
       >
         <Marker coordinate={currentLocation} title="Local Atual" />
